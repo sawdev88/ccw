@@ -13,26 +13,10 @@ img {
   max-width: 100%;
 }
 
-#home {
-  background: url(../img/truck_bg.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  color: #fff;
-}
-
-#services {
-  background: url(../img/services_bg.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  color: #fff;
+iframe {
+  background-image: url('../img/ajax-loader.gif');
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /**************************************************************** HEADER & NAV*/
@@ -66,6 +50,7 @@ header span {
   color: rgba(255, 255, 255, 0.6);
 }
 
+
 /*NAV*/
 
 nav ul {
@@ -98,14 +83,26 @@ nav a:hover {
   border-bottom: 4px solid #F6511D;
 }
 
+
 /****************************************************************** INDEX PAGE*/
 
-#home h1, #home h2 {
-  position: absolute;
+#home {
+  background: url(../img/truck_bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
   color: #fff;
-  display: inline;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 24px;
+}
+
+#home main {
+  display: none;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+  margin-top: 10%;
+  padding: 24px 0;
 }
 
 #home h1 {
@@ -122,6 +119,17 @@ nav a:hover {
 
 
 /**************************************************************** SERVICE PAGE*/
+
+#services {
+  background: url(../img/services_bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
 
 #services main {
   width: 80%;
@@ -160,6 +168,7 @@ li.selected-service:hover {
 .service-content {
   height: 65%;
   overflow-y: auto;
+  display: none;
 }
 
 .service-content p {
@@ -188,15 +197,37 @@ li.selected-service:hover {
   background-color: rgba(255, 255, 255, .5);
 }
 
+
 /**************************************************************** GALLERY PAGE*/
 
 #gallery {
-  background: #333;
+  background: url(../img/gallery_bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+
+#gallery main {
+  width: 80%;
+  height: 80%;
+  overflow-y: scroll;
+  margin: 32px auto 80px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 24px;
 }
 
 .gallery {
   text-align: center;
   margin-top: 24px;
+}
+
+.gallery-header {
+  margin-bottom: 16px;
+  overflow: hidden;
 }
 
 .gallery hr {
@@ -211,7 +242,6 @@ li.selected-service:hover {
 
 .gallery h1 {
   color: #F6511D;
-  margin-left: -100px;
   font-size: 68px;
 }
 
@@ -219,15 +249,66 @@ li.selected-service:hover {
   font-family: Apple Chancery, cursive;
 }
 
+.header-icons {
+  font-size: 38px;
+  margin-top: 24px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.icons-media {
+  list-style: none;
+}
+
+.icons-media li {
+  display: inline-block;
+}
+
+.header-icons i {
+  margin-left: 24px;
+}
+
+.header-icons i:hover {
+  cursor: pointer;
+  color: #f76436;
+}
+
+.selected-media {
+  color: #F6511D;
+}
+
+.selected-media i {
+  border-bottom: 1px solid #fff;
+}
+
 .images {
-  width: 80%;
   margin: 32px auto;
+  clear: both;
 }
 
 .images img {
   width: 200px;
   height: auto;
   margin: 8px;
+  border-radius: 15px;
+}
+
+.videos {
+  display: none;
+}
+
+#overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  text-align: center;
+}
+
+#overlay img {
+  margin-top: 10%;
 }
 
 /**************************************************************** CONTACT PAGE*/
@@ -292,12 +373,6 @@ input:focus, textarea:focus {
   margin-top: 8px;
 }
 
-iframe {
-  background-image: url('../img/ajax-loader.gif');
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 #gmap_display img {
   max-width: none!important;
   background: none!important;
@@ -308,6 +383,7 @@ iframe {
   display: inline;
   color: rgba(0, 0, 0, 0.5);
 }
+
 
 /********************************************************************** FOOTER*/
 
@@ -346,6 +422,7 @@ footer span {
   transition: .1s linear;
   color: #f6511d;
 }
+
 
 /*FREE QOUTE POP UP*/
 
