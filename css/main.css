@@ -7,6 +7,7 @@
 body, html {
   height: 100%;
   width: 100%;
+  overflow-y: hidden;
 }
 
 img {
@@ -142,6 +143,7 @@ nav a:hover {
   margin-top: 32px;
   text-align: center;
   background: rgba(0, 0, 0, 0.5);
+  display: none;
 }
 
 .services li {
@@ -250,6 +252,8 @@ li.selected-service:hover {
 }
 
 .header-icons {
+  text-align: right;
+  padding-right: 160px !important;
   font-size: 38px;
   margin-top: 24px;
   color: rgba(255, 255, 255, 0.5);
@@ -280,8 +284,8 @@ li.selected-service:hover {
   border-bottom: 1px solid #fff;
 }
 
-.images {
-  margin: 32px auto;
+.images, .videos {
+  margin: 16px auto;
   clear: both;
 }
 
@@ -290,6 +294,11 @@ li.selected-service:hover {
   height: auto;
   margin: 8px;
   border-radius: 15px;
+}
+
+.images img:hover, .header-icons i:hover {
+  transition: .2s linear;
+  transform: scale(1.05);
 }
 
 .videos {
@@ -465,5 +474,14 @@ footer span {
   }
   #services main {
     margin-top: 0;
+  }
+  #gallery main {
+    margin-top: 16px;
+  }
+  #overlay img {
+    margin-top: 48px;
+  }
+  #contact main {
+    margin-top: 16px;
   }
 }

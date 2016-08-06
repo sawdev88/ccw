@@ -40,7 +40,7 @@ function hideLightbox() {
 
 $(function() {
 
-  $('#home main, .service-content').fadeIn(1000);
+  $('#home main, .services ul, .service-content').delay(200).fadeIn(1000);
 
   // Toggle service menu item display
   $('.service-items').on('click', 'li', function() {
@@ -60,7 +60,7 @@ $(function() {
     }
   })
 
-  //Toggle image and video gallery
+  //Toggle image and video ul
   $('.icons-media').on('click', 'li', function () {
     $(this).siblings().removeClass('selected-media');
     $(this).addClass('selected-media');
@@ -75,6 +75,7 @@ $(function() {
     }
   })
 
+  // Show Lightbox on img click
   showLightbox();
 
   // SHOW popup
