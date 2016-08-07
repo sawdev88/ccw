@@ -83,4 +83,8 @@ $(function() {
     bottom: '50px'
   }, 'slow');
 
+  $('.hamburger').on('click', function () {
+    $('.navbar').fadeToggle();
+  })
+
 })

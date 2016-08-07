@@ -7,7 +7,7 @@
 body, html {
   height: 100%;
   width: 100%;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 img {
@@ -84,6 +84,10 @@ nav a:hover {
   border-bottom: 4px solid #F6511D;
 }
 
+.hamburger {
+  display: none;
+}
+
 
 /****************************************************************** INDEX PAGE*/
 
@@ -107,17 +111,9 @@ nav a:hover {
 }
 
 #home h1 {
-  bottom: 300px;
-  left: 150px;
   font-size: 68px;
   font-family: Apple Chancery, cursive;
 }
-
-#home h2 {
-  bottom: 210px;
-  left: 200px;
-}
-
 
 /**************************************************************** SERVICE PAGE*/
 
@@ -134,7 +130,7 @@ nav a:hover {
 
 #services main {
   width: 80%;
-  margin: 32px auto 80px;
+  margin: 32px auto;
   background: rgba(0, 0, 0, 0.8);
   padding: 24px;
 }
@@ -267,11 +263,11 @@ li.selected-service:hover {
   display: inline-block;
 }
 
-.header-icons i {
+.header-icons span {
   margin-left: 24px;
 }
 
-.header-icons i:hover {
+.header-icons span:hover {
   cursor: pointer;
   color: #f76436;
 }
@@ -280,7 +276,7 @@ li.selected-service:hover {
   color: #F6511D;
 }
 
-.selected-media i {
+.selected-media span {
   border-bottom: 1px solid #fff;
 }
 
@@ -432,6 +428,10 @@ footer span {
   color: #f6511d;
 }
 
+.footer-info-mobile {
+  display: none;
+}
+
 
 /*FREE QOUTE POP UP*/
 
@@ -483,5 +483,96 @@ footer span {
   }
   #contact main {
     margin-top: 16px;
+  }
+}
+
+@media (max-width: 820px) {
+  header {
+    padding: 8px 0;
+  }
+  .brand {
+    margin-left: 48px;
+  }
+  nav {
+    padding: 0;
+  }
+  .navbar {
+    display: none;
+  }
+  nav ul {
+    position: relative;
+    text-align: center;
+    background: #000;
+    padding: 48px 0;
+    margin-top: 9px;
+    z-index: 1001;
+  }
+  nav li {
+    display: block;
+    margin: 32px 0;
+  }
+  nav a {
+    padding: 16px 8px;
+    font-size: 32px;
+  }
+  .selected {
+    padding: 8px 72px;
+    border: 4px solid #F6511D;
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 16px;
+    right: 48px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 4px 4px 0 4px;
+  }
+  #home main {
+    margin-top: 25%;
+  }
+  #services main, #gallery main, #contact main {
+    width: 95%;
+  }
+  #services main {
+    height: 75%;
+  }
+  #gallery main, #contact main {
+    height: 85%;
+  }
+  iframe {
+    width: 500px;
+    margin-bottom: 16px;
+  }
+  #overlay img {
+    margin-top: 25%;
+    max-width: 95%;
+  }
+  #contact main {
+    overflow-y: scroll;
+  }
+  .contact_info {
+    margin-top: 24px;
+  }
+  .contact_info h3, .contact_info h2 {
+    margin-bottom: 8px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 0;
+  }
+  .footer-info {
+    display: none;
+  }
+  .footer-info-mobile {
+    display: block;
+  }
+  .social-links {
+    padding: 0;
+    text-align: center;
+  }
+  .free-quote {
+    display: none;
   }
 }
